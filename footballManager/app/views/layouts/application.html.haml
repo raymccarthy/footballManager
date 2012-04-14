@@ -1,9 +1,22 @@
 !!!
 %html
   %head
-    %title FootballManager
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
-    = csrf_meta_tags
+    %title= @title
+    = csrf_meta_tag
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    = stylesheet_link_tag 'blueprint/screen', :media => 'screen'
+    = stylesheet_link_tag 'blueprint/print',  :media => 'print'
+    /[if lt IE 8] <haml:loud> stylesheet_link_tag 'blueprint/ie' </haml:loud>
+    = stylesheet_link_tag 'custom', :media => 'screen'
   %body
-    = yield
+    .container
+      %header
+        = image_tag("logo.jpg", :alt => "Sample App", :class => "round",:size => "50x50")
+        %nav.round
+          %ul
+            %li= link_to "Home", '#'
+            %li= link_to "Help", '#'
+            %li= link_to "Sign in", '#'
+      %section.round
+        = yield

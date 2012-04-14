@@ -63,3 +63,5 @@ module FootballManager
     config.assets.version = '1.0'
   end
 end
+
+
