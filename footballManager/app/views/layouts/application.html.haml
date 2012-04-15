@@ -1,22 +1,33 @@
 !!!
 %html
   %head
-    %title= @title
+    %title= "Soccer Manager | #{@title}"
     = csrf_meta_tag
-    /[if lt IE 9]
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    = stylesheet_link_tag 'blueprint/screen', :media => 'screen'
-    = stylesheet_link_tag 'blueprint/print',  :media => 'print'
-    /[if lt IE 8] <haml:loud> stylesheet_link_tag 'blueprint/ie' </haml:loud>
-    = stylesheet_link_tag 'custom', :media => 'screen'
+    = render 'layouts/stylesheets'
+
   %body
-    .container
-      %header
-        = image_tag("logo.jpg", :alt => "Sample App", :class => "round",:size => "50x50")
-        %nav.round
+    .container.grey.round
+      .row.round
+        %nav.topbar
           %ul
-            %li= link_to "Home", '#'
-            %li= link_to "Help", '#'
             %li= link_to "Sign in", '#'
-      %section.round
-        = yield
+            %li= link_to "Settings", '#'
+            %li= link_to "Profile", '#'
+      .row.round
+        .onecol
+          = image_tag("logo.jpg", :alt => "Sample App", :class => "round",:size => "75x75")
+          %nav.leftbar
+            %ul
+              %li= link_to "Home", '#'
+              %li= link_to "Help", '#'
+
+        .elevencol.last.white.round
+          = yield
+      .row.trailer.round
+        %nav.topbar
+          %ul
+            %li= link_to "About", "#"
+            %li= link_to "Contact","#"
+
+          %p
+

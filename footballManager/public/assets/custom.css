@@ -1,82 +1,96 @@
-.container {
-    width: 710px;
-}
-
-body {
-    background: #C6E3FF;
-}
-
+/* Header */
 header {
     padding-top: 20px;
 }
 
-header img {
-    padding: 1em;
-    background: #fff;
+trailer {
+    padding-top: 20px;
 }
 
-section {
-    margin-top: 1em;
-    font-size: 120%;
-    padding: 20px;
-    background: #fff;
+
+.white {
+    background-color:  white;
 }
 
-section h1 {
-    font-size: 200%;
+.grey {
+    background-color: #808080;
 }
-
-/* Links */
-
-a {
-    color: #09c;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #069;
-    text-decoration: underline;
-}
-
-a:visited {
-    color: #069;
-}
-
 /* Navigation */
 
-nav {
-    float: right;
+.topbar {
+    padding: 0 0.7em;
+    white-space: nowrap;
+
 }
 
-nav {
-    background-color: white;
+.topbar {
     padding: 0 0.7em;
     white-space: nowrap;
 }
 
-nav ul {
+.topbar ul {
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.topbar ul li {
     list-style-type: none;
     display: inline-block;
+    float: right;
+
 
 }
 
-nav ul li a {
+.topbar ul li a {
     padding: 0 5px;
     font-weight: bold;
+    text-decoration: none;
 }
 
-nav ul li a:visited {
-    color: #09c;
+.topbar ul li a:visited {
+    color: white;
+    text-decoration: none;
 }
 
-nav ul li a:hover {
+.topbar ul li a:hover {
     text-decoration: underline;
 }
+
+.leftbar {
+    padding: 0 0.7em;
+    white-space: nowrap;
+
+}
+
+.leftbar {
+    white-space: nowrap;
+}
+
+.leftbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.leftbar ul li {
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+.leftbar ul li a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.leftbar ul li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.leftbar ul li a:hover {
+    text-decoration: underline;
+}
+
 
 /* Sign up button */
 
@@ -92,4 +106,10 @@ a.signup_button {
     font-size: 150%;
     font-weight: bold;
     padding: 20px;
+}
+
+.round {
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
 }
