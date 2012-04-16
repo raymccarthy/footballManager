@@ -22,8 +22,8 @@ group :test do
   gem 'webrat'
   gem 'spork'
   gem 'factory_girl_rails'
-  #gem 'autotest'
-  #gem 'autotest-rails-pure'
-  #gem 'autotest-fsevent'
-  #gem 'autotest-growl'
+  gem 'autotest'
+  gem 'autotest-rails-pure'
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
 end
